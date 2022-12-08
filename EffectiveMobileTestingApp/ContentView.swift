@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import NetworkLayer
 
 struct ContentView: View {
+   @ObservedObject private var viewModel = HomeScreenViewModel()
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+        }
+        .onAppear {
+            viewModel.fetchHomeScreen()
         }
         .padding()
     }

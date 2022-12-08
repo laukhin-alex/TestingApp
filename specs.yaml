@@ -1,0 +1,166 @@
+---
+openapi: 3.0.0
+info:
+  title: EffectiveMobileTestingAppAPI
+  description: Effective Mobile Testing App API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://run.mocky.io/v3
+  description: Main server
+tags:
+- name: homeScreen
+  description: Home Screen
+- name: productDetails
+  description: Product details screen
+- name: myCart
+  description: My cart screen
+paths:
+  /654bd15e-b121-49ba-a588-960956b15175:
+    get:
+      tags:
+      - homeScreen
+      summary: Home Screen
+      description: get Home Screen
+      operationId: getHomeScreen
+      responses:
+        "200":
+          description: good
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HomeScreen'
+        "400":
+          description: bad input parameter
+  /6c14c560-15c6-4248-b9d2-b4508df7d4f5:
+    get:
+      tags:
+      - productDetails
+      summary: product Details
+      description: product Details 
+      operationId: getProductDetails
+      responses:
+        "200":
+          description: good
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDetails'
+        "400":
+          description: bad input parameter
+  /53539a72-3c5f-4f30-bbb1-6ca10d42c149:
+    get:
+      tags:
+      - myCart
+      summary: my Cart
+      description: get My Cart
+      operationId: getMyCart
+      responses:
+        "200":
+          description: good
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MyCart'
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    HomeScreen:
+     required:
+     - home_store
+     - best_seller
+     properties:
+      home_store:
+       type: object
+       items: 
+        $ref: '#/components/schemas/Home_store'
+      best_seller:
+       type: object
+       items: 
+        $ref: '#/components/schemas/Best_seller'
+    ProductDetails:
+     type: object
+     properties:
+      CPU:
+       type: string
+      camera:
+       type: string
+      capacity:
+       type: array
+       items:
+         type: integer
+      color:
+       type: array
+       items:
+        type: string
+      id:
+       type: integer
+      images: 
+       type: array
+       items:
+        type: string
+      isFavorites:
+       type: integer
+      price:
+       type: number
+      rating:
+       type: number
+      sd:
+       type: string      
+      ssd:
+       type: string      
+      title:
+       type: string      
+    MyCart:
+     type: object
+     properties:
+      basket:
+       type: object
+       properties:
+        id: 
+         type: integer
+        images:
+         type: string
+        price:
+         type: number
+        title:
+         type: string
+      delivery:
+       type: string
+      id:
+       type: integer
+      total: 
+       type: number
+    Home_store:
+     type: object
+     properties:
+      id:
+       type: integer
+      is_new:
+       type: boolean
+      title: 
+       type: string
+      subtitle:
+       type: string
+      picture:
+       type: string
+      is_buy:
+       type: boolean
+    Best_seller:
+     type: object
+     properties:
+      id:
+       type: integer
+      is_favorites:
+       type: boolean
+      title: 
+       type: string
+      price_without_discount:
+       type: number
+      discount_price:
+       type: number
+      picture:
+       type: string
