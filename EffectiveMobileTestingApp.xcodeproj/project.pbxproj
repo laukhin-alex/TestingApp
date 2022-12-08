@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0A93BD294223FA00324C0E /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0A93BC294223FA00324C0E /* NetworkLayer */; };
+		1F0A93C22942274900324C0E /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */; };
 		1FBA70072940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */; };
 		1FBA70092940EB1A003562B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA70082940EB1A003562B9 /* ContentView.swift */; };
 		1FBA700B2940EB1F003562B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBA700A2940EB1F003562B9 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0A93BA294223A300324C0E /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkLayer; path = EffectiveMobileTestingApp/NetworkLayer; sourceTree = SOURCE_ROOT; };
+		1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		1FBA70032940EB1A003562B9 /* EffectiveMobileTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveMobileTestingAppApp.swift; sourceTree = "<group>"; };
 		1FBA70082940EB1A003562B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0A93BD294223FA00324C0E /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0A93BB294223FA00324C0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F0A93BE2942262100324C0E /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A93C02942264C00324C0E /* HomeScreenView */,
+				1F0A93BF2942263F00324C0E /* HomeScreenViewModel */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		1F0A93BF2942263F00324C0E /* HomeScreenViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */,
+			);
+			path = HomeScreenViewModel;
+			sourceTree = "<group>";
+		};
+		1F0A93C02942264C00324C0E /* HomeScreenView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeScreenView;
+			sourceTree = "<group>";
+		};
 		1FBA6FFA2940EB1A003562B9 = {
 			isa = PBXGroup;
 			children = (
 				1FBA70052940EB1A003562B9 /* EffectiveMobileTestingApp */,
 				1FBA70042940EB1A003562B9 /* Products */,
+				1F0A93BB294223FA00324C0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +88,8 @@
 		1FBA70052940EB1A003562B9 /* EffectiveMobileTestingApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F0A93BE2942262100324C0E /* HomeScreen */,
+				1F0A93BA294223A300324C0E /* NetworkLayer */,
 				1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */,
 				1FBA70082940EB1A003562B9 /* ContentView.swift */,
 				1FBA700A2940EB1F003562B9 /* Assets.xcassets */,
@@ -83,6 +122,9 @@
 			dependencies = (
 			);
 			name = EffectiveMobileTestingApp;
+			packageProductDependencies = (
+				1F0A93BC294223FA00324C0E /* NetworkLayer */,
+			);
 			productName = EffectiveMobileTestingApp;
 			productReference = 1FBA70032940EB1A003562B9 /* EffectiveMobileTestingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBA70092940EB1A003562B9 /* ContentView.swift in Sources */,
+				1F0A93C22942274900324C0E /* HomeScreenViewModel.swift in Sources */,
 				1FBA70072940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +382,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F0A93BC294223FA00324C0E /* NetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FBA6FFB2940EB1A003562B9 /* Project object */;
 }

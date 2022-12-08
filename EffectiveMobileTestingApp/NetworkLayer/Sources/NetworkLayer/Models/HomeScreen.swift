@@ -12,8 +12,8 @@ import AnyCodable
 
 public struct HomeScreen: Codable, JSONEncodable, Hashable {
 
-    public var homeStore: [HomeStore]
-    public var bestSeller: [BestSeller]
+    public var homeStore: [HomeStore]?
+    public var bestSeller: [BestSeller]?
 
     public init(homeStore: [HomeStore], bestSeller: [BestSeller]) {
         self.homeStore = homeStore
