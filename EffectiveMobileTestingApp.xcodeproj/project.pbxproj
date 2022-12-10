@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1F0A93BD294223FA00324C0E /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0A93BC294223FA00324C0E /* NetworkLayer */; };
 		1F0A93C22942274900324C0E /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */; };
+		1F0A93C429449B0D00324C0E /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A93C329449B0D00324C0E /* HomeScreenView.swift */; };
+		1F0A93C82944A22F00324C0E /* MarkProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A93C72944A22F00324C0E /* MarkProBold.otf */; };
+		1F0A93CB2944A85C00324C0E /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A93CA2944A85C00324C0E /* SelectCategoryView.swift */; };
+		1FA444B22944B9C700784AAD /* SelectCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA444B12944B9C700784AAD /* SelectCategoryViewModel.swift */; };
+		1FA444B42944E16800784AAD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA444B32944E16800784AAD /* Colors.swift */; };
+		1FA444B82944E89600784AAD /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA444B72944E89600784AAD /* SwiftUIView.swift */; };
 		1FBA70072940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */; };
 		1FBA70092940EB1A003562B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA70082940EB1A003562B9 /* ContentView.swift */; };
 		1FBA700B2940EB1F003562B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBA700A2940EB1F003562B9 /* Assets.xcassets */; };
@@ -18,6 +24,13 @@
 /* Begin PBXFileReference section */
 		1F0A93BA294223A300324C0E /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkLayer; path = EffectiveMobileTestingApp/NetworkLayer; sourceTree = SOURCE_ROOT; };
 		1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		1F0A93C329449B0D00324C0E /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		1F0A93C72944A22F00324C0E /* MarkProBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkProBold.otf; sourceTree = "<group>"; };
+		1F0A93C92944A2C700324C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1F0A93CA2944A85C00324C0E /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
+		1FA444B12944B9C700784AAD /* SelectCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewModel.swift; sourceTree = "<group>"; };
+		1FA444B32944E16800784AAD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1FA444B72944E89600784AAD /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		1FBA70032940EB1A003562B9 /* EffectiveMobileTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveMobileTestingAppApp.swift; sourceTree = "<group>"; };
 		1FBA70082940EB1A003562B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				1F0A93C12942274900324C0E /* HomeScreenViewModel.swift */,
+				1FA444B02944B9A600784AAD /* SelectCategoryViewModel */,
 			);
 			path = HomeScreenViewModel;
 			sourceTree = "<group>";
@@ -64,8 +78,43 @@
 		1F0A93C02942264C00324C0E /* HomeScreenView */ = {
 			isa = PBXGroup;
 			children = (
+				1F0A93C329449B0D00324C0E /* HomeScreenView.swift */,
+				1FA444AF2944B98C00784AAD /* SelectCategoryView */,
 			);
 			path = HomeScreenView;
+			sourceTree = "<group>";
+		};
+		1F0A93C52944A1BB00324C0E /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A93C62944A1C900324C0E /* Fonts+Colors */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		1F0A93C62944A1C900324C0E /* Fonts+Colors */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A93C72944A22F00324C0E /* MarkProBold.otf */,
+				1FA444B32944E16800784AAD /* Colors.swift */,
+			);
+			path = "Fonts+Colors";
+			sourceTree = "<group>";
+		};
+		1FA444AF2944B98C00784AAD /* SelectCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A93CA2944A85C00324C0E /* SelectCategoryView.swift */,
+			);
+			path = SelectCategoryView;
+			sourceTree = "<group>";
+		};
+		1FA444B02944B9A600784AAD /* SelectCategoryViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1FA444B12944B9C700784AAD /* SelectCategoryViewModel.swift */,
+			);
+			path = SelectCategoryViewModel;
 			sourceTree = "<group>";
 		};
 		1FBA6FFA2940EB1A003562B9 = {
@@ -88,12 +137,15 @@
 		1FBA70052940EB1A003562B9 /* EffectiveMobileTestingApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F0A93C92944A2C700324C0E /* Info.plist */,
+				1F0A93C52944A1BB00324C0E /* Additions */,
 				1F0A93BE2942262100324C0E /* HomeScreen */,
 				1F0A93BA294223A300324C0E /* NetworkLayer */,
 				1FBA70062940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift */,
 				1FBA70082940EB1A003562B9 /* ContentView.swift */,
 				1FBA700A2940EB1F003562B9 /* Assets.xcassets */,
 				1FBA700C2940EB1F003562B9 /* Preview Content */,
+				1FA444B72944E89600784AAD /* SwiftUIView.swift */,
 			);
 			path = EffectiveMobileTestingApp;
 			sourceTree = "<group>";
@@ -168,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBA700E2940EB1F003562B9 /* Preview Assets.xcassets in Resources */,
+				1F0A93C82944A22F00324C0E /* MarkProBold.otf in Resources */,
 				1FBA700B2940EB1F003562B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +234,12 @@
 			files = (
 				1FBA70092940EB1A003562B9 /* ContentView.swift in Sources */,
 				1F0A93C22942274900324C0E /* HomeScreenViewModel.swift in Sources */,
+				1FA444B82944E89600784AAD /* SwiftUIView.swift in Sources */,
+				1FA444B22944B9C700784AAD /* SelectCategoryViewModel.swift in Sources */,
+				1FA444B42944E16800784AAD /* Colors.swift in Sources */,
 				1FBA70072940EB1A003562B9 /* EffectiveMobileTestingAppApp.swift in Sources */,
+				1F0A93CB2944A85C00324C0E /* SelectCategoryView.swift in Sources */,
+				1F0A93C429449B0D00324C0E /* HomeScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +371,7 @@
 				DEVELOPMENT_TEAM = 6JQR5WH86M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EffectiveMobileTestingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +401,7 @@
 				DEVELOPMENT_TEAM = 6JQR5WH86M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EffectiveMobileTestingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

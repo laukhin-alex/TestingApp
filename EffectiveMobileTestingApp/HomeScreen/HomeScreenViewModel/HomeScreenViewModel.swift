@@ -9,15 +9,29 @@ import Foundation
 import NetworkLayer
 
 class HomeScreenViewModel: ObservableObject {
+    @Published var homeStore: [HomeStore] = []
     @Published var bestSeller: [BestSeller] = []
-    var canLoad = true
+    var canLoadHomeStore = true
+    var canLoadBestSeller = true
 
-    func fetchHomeScreen() {
-        canLoad = false
+    func fetchHomeStore() {
+        canLoadHomeStore = false
+        HomeScreenAPI.getHomeScreen() { [weak self] data, error in
+            if error == nil {
+                self?.homeStore.append(contentsOf: data?.homeStore ?? [])
+                print(data?.homeStore as Any)
+            } else {
+                print("Error")
+            }
+        }
+    }
+
+    func fetchBestSeller() {
+        canLoadBestSeller = false
         HomeScreenAPI.getHomeScreen() { [weak self] data, error in
             if error == nil {
                 self?.bestSeller.append(contentsOf: data?.bestSeller ?? [])
-                print(data?.bestSeller)
+                print(data?.bestSeller as Any)
             } else {
                 print("Error")
             }

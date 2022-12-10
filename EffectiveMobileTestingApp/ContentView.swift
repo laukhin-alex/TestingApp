@@ -12,17 +12,15 @@ struct ContentView: View {
    @ObservedObject private var viewModel = HomeScreenViewModel()
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        HomeScreenView()
         .onAppear {
-            viewModel.fetchHomeScreen()
+            viewModel.fetchBestSeller()
+            viewModel.fetchHomeStore()
         }
         .padding()
+        .background(colorBackGround)
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
