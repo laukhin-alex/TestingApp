@@ -7,30 +7,33 @@
 
 import Foundation
 
-class SelectedCategoryViewModel {
+class SelectedCategoryViewModel: ObservableObject {
+    var categories = [
+        SelectedCategory(symbolName: "iphone", categoryName: "Phones", isOn: true),
+        SelectedCategory(symbolName: "tv", categoryName: "Computer", isOn: false),
+        SelectedCategory(symbolName: "bolt.heart", categoryName: "Health", isOn: false),
+        SelectedCategory(symbolName: "books.vertical.fill", categoryName: "Books", isOn: false),
+        SelectedCategory(symbolName: "applewatch.watchface", categoryName: "Other", isOn: false)
+    ]
 
+
+    func selectedCategory() {
+        print("ba")
+    }
 }
 struct SelectedCategory {
     let id = UUID()
     let symbolName: String
     let categoryName: String
+    var isOn: Bool
 
-    enum isTupped: String {
-        case iphone = "iphone"
-        case tv = "tv"
-        case heart = "bolt.heart"
-        case books = "books.vertical.fill"
-        case appleWatch = "applewatch.watchface"
-    }
-    
 }
 
-let categories = [
-    SelectedCategory(symbolName: "iphone", categoryName: "Phones"),
-    SelectedCategory(symbolName: "tv", categoryName: "Computer"),
-    SelectedCategory(symbolName: "bolt.heart", categoryName: "Health"),
-    SelectedCategory(symbolName: "books.vertical.fill", categoryName: "Books"),
-    SelectedCategory(symbolName: "applewatch.watchface", categoryName: "Other")
-]
 
-
+enum isTupped: String {
+    case iphone = "iphone"
+    case tv = "tv"
+    case heart = "bolt.heart"
+    case books = "books.vertical.fill"
+    case appleWatch = "applewatch.watchface"
+}

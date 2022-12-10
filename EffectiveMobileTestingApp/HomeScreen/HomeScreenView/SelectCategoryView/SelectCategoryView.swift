@@ -8,28 +8,39 @@
 import SwiftUI
 
 struct SelectCategoryView: View {
+    @ObservedObject var category = SelectedCategoryViewModel()
+//    @State var iphoneIsOn = true
+//    @State var tvIsOn = false
+//    @State var heartIsOn = false
+//    @State var booksIsOn = false
+//    @State var appleWatchIsOn = false
+
 
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(spacing: -2) {
-                ForEach(categories, id:  \.id) {symbol in
-                    VStack(spacing: 7) {
-                        Text(Image(systemName:symbol.symbolName))
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                            .frame(width: 71, height: 71)
-                            .background(colorOrange)
-                            .cornerRadius(35)
-                        Text(symbol.categoryName)
-                            .font(Font.custom("MarkProBold", size: 12))
-                            .foregroundColor(colorOrange)
+            HStack(spacing: -10) {
+                ForEach(category.categories, id:  \.id) { symbol in
+                    Button(action: category.selectedCategory)  {
+                        VStack(spacing: 7) {
+                            Text(Image(systemName:symbol.symbolName))
+                                .frame(width: 71, height: 71)
+                                .foregroundColor(symbol.isOn ?  .white : .gray)
+                                .background(symbol.isOn ? colorOrange : .white)
+                                .font(.largeTitle)
+                                .cornerRadius(34)
+
+                            Text(symbol.categoryName)
+                                .font(Font.custom("MarkProBold", size: 12))
+                                .foregroundColor(symbol.isOn ? colorOrange : .black)
+                        }
                     }
                 }
                 .padding()
             }
-            Spacer()
-        }
 
+        }
+        .background(colorBackGround)
+        .onAppear()
     }
 }
 
